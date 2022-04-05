@@ -5,8 +5,7 @@
   "description": "This extension provided an altered light mode and additional dark mode to atlassians jira. It benefits the user experience by providing a more user-friendly design and toggleable light/dark modes.",
   "version": "1.0",
   "permissions":[
-    "activeTab",
-    "storage"
+    "activeTab"
   ],
   "icons": {
     "16": "./icons/icon.png",
