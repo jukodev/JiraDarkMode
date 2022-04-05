@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jira custom dark mode",
+  "description": "Diese extension würde definitiv niemals* deine Daten (Browserverlauf, Kaufverhalten, Webcam) weiterverbreiten, um daraus kommerziellen Erfolg zu gewinnen",
+  "version": "1.0",
+  "permissions":[
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "16": "threadt28.png",
+    "48": "threadt48.png",
+    "128": "threadt128.png"
+  },
+  "content_scripts":[
+    {
+	    "matches": ["*://*.atlassian.net/*"],
+	    "js": ["script.js"]
+    }
+   ],
+   "browser_action":{
+     "default_popup": "index.html",
+     "default_title": "sike"
+   }
+}
