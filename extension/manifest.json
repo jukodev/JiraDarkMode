@@ -2,16 +2,16 @@
   "manifest_version": 2,
 
   "name": "Jira custom dark mode",
-  "description": "Diese extension würde definitiv niemals* deine Daten (Browserverlauf, Kaufverhalten, Webcam) weiterverbreiten, um daraus kommerziellen Erfolg zu gewinnen",
+  "description": "This extension provided an altered light mode and additional dark mode to atlassians jira. It benefits the user experience by providing a more user-friendly design and toggleable light/dark modes.",
   "version": "1.0",
   "permissions":[
     "activeTab",
     "storage"
   ],
   "icons": {
-    "16": "./icons/threadt28.png",
-    "48": "./icons/threadt48.png",
-    "128": "./icons/threadt128.png"
+    "16": "./icons/icon.png",
+    "48": "./icons/icon.png",
+    "128": "./icons/icon.png"
   },
   "content_scripts":[
     {
