@@ -9,18 +9,17 @@
     "storage"
   ],
   "icons": {
-    "16": "threadt28.png",
-    "48": "threadt48.png",
-    "128": "threadt128.png"
+    "16": "./icons/threadt28.png",
+    "48": "./icons/threadt48.png",
+    "128": "./icons/threadt128.png"
   },
   "content_scripts":[
     {
 	    "matches": ["*://*.atlassian.net/*"],
-	    "js": ["script.js"]
+	    "js": ["./content/script.js"]
     }
    ],
    "browser_action":{
-     "default_popup": "index.html",
-     "default_title": "sike"
+     "default_popup": "./content/index.html"
    }
 }
