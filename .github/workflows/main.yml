@@ -2,7 +2,8 @@ name: Release extension
 
 on:
   push:
-    branches: [ 'master' ]
+    branches: [ 'main' ]
+    paths: [ 'extension/mainfest.json' ]
 
 jobs:
   release:
