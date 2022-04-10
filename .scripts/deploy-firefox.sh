@@ -15,4 +15,5 @@ jq ".manifest_version = $manifestVersion" $manifestFileFirefox > $manifestFileFi
 # change 'action' key to 'browser_action'
 jq '.["browser_action"] = .action | del(.action)' $manifestFileFirefox > $manifestFileFirefox.tmp && mv $manifestFileFirefox.tmp $manifestFileFirefox
 
-zip -r '../extension_firefox.zip' $targetDir
+cd $targetDir
+zip -r "../extension_firefox.zip" ./*
