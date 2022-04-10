@@ -3,7 +3,7 @@ name: Release extension
 on:
   push:
     branches: [ 'main' ]
-    paths: [ 'extension/mainfest.json' ]
+    paths: [ 'extension/manifest.json' ]
 
 jobs:
   release:
