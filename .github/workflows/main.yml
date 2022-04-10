@@ -14,16 +14,16 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Read version
-        run: echo "::set-output name=VERSION::$(../.scripts/read-version.sh)"
+        run: echo "::set-output name=VERSION::$(.scripts/read-version.sh)"
         id: version
 
       - name: Deploy for chrome
         run: ./deploy-chrome.sh
-        working-directory: ../.scripts
+        working-directory: .scripts/
 
       - name: Deploy for firefox
         run: ./deploy-firefox.sh
-        working-directory: ../.scripts
+        working-directory: .scripts/
 
       - name: Create github release
         uses: softprops/action-gh-release@v1
