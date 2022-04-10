@@ -39,10 +39,19 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
 setInterval(() => {
 	r.style.setProperty("--ds-background-neutral-subtle-hovered", currentHover); //card hover
 	r.style.setProperty("--ds-text", currentText); //text
+	r.querySelector("body").style.backgroundColor = currentBackground;
 
 	changeBackground(".css-1yfnrso", currentBackground);
 	changeBackground(".derbhP", currentSurface);
-
+	changeBackground(
+		".timesheet-table-module__nonWorking___aRYz6",
+		currentBackground
+	);
+	changeBackground(
+		".timesheet-table-module__highlight___3Qvls",
+		currentBackground
+	);
+	changeColor(".timesheet-table-module__sidebarCell___o7PCU", currentText);
 	changeColor(".gjCDIs", currentText);
 	changeColor(".dqHXQe", currentText);
 
@@ -74,6 +83,15 @@ setInterval(() => {
 	arr.forEach(div => {
 		div.style.backgroundColor = currentBackground;
 	});
+
+	/*arr = divs.filter(
+		div =>
+			document.defaultView.getComputedStyle(div, null).backgroundColor !==
+			("rgb(18, 18, 18);" || "rgb(47, 47, 47)")
+	);
+	arr.forEach(div => {
+		div.style.backgroundColor = currentBackground;
+	});*/
 
 	let ps = Array.from(document.querySelectorAll("p"));
 	arr = ps.filter(
