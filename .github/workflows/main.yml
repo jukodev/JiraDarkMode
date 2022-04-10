@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Grant execute permission
+        run: chmod -R +x .scripts
+
       - name: Read version
         run: echo "::set-output name=VERSION::$(.scripts/read-version.sh)"
         id: version
