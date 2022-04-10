@@ -1,0 +1,37 @@
+name: Release extension
+
+on:
+  push:
+    branches: [ 'main' ]
+    paths: [ 'extension/manifest.json' ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Grant execute permission
+        run: chmod -R +x .scripts
+
+      - name: Read version
+        run: echo "::set-output name=VERSION::$(.scripts/read-version.sh)"
+        id: version
+
+      - name: Deploy for chrome
+        run: ./deploy-chrome.sh
+        working-directory: .scripts/
+
+      - name: Deploy for firefox
+        run: ./deploy-firefox.sh
+        working-directory: .scripts/
+
+      - name: Create github release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{steps.version.outputs.VERSION}}
+          files: |
+            extension_chrome.zip
+            extension_firefox.zip
