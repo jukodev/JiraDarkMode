@@ -1,5 +1,6 @@
 {
 	"manifest_version": 3,
+
 	"name": "Jira custom dark mode",
 	"description": "This extension provided an altered light mode and additional dark mode to atlassians jira. It benefits the user experience by providing a more user-friendly design and toggleable light/dark modes.",
 	"version": "1.0.3",
@@ -11,8 +12,9 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*.atlassian.net/*"],
-			"js": ["./content/script.js"]
+			"matches": ["*://*.atlassian.net/*", "*://*.herokuapp.com/*"],
+			"js": ["./content/script.js"],
+			"all_frames": true
 		}
 	],
 	"action": {
