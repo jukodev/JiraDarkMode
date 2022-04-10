@@ -1,2 +1,2 @@
-originDir='./extension'
-zip -r './extension_chrome.zip' $originDir
+originDir='../extension'
+zip -r '../extension_chrome.zip' $originDir
