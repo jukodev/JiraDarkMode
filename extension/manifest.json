@@ -1,10 +1,9 @@
 {
   "manifest_version": 3,
-
   "name": "Jira custom dark mode",
   "description": "This extension provided an altered light mode and additional dark mode to atlassians jira. It benefits the user experience by providing a more user-friendly design and toggleable light/dark modes.",
   "version": "1.0.1",
-  "permissions":[
+  "permissions": [
     "activeTab"
   ],
   "icons": {
@@ -12,13 +11,17 @@
     "48": "./icons/icon.png",
     "128": "./icons/icon.png"
   },
-  "content_scripts":[
+  "content_scripts": [
     {
-	    "matches": ["*://*.atlassian.net/*"],
-	    "js": ["./content/script.js"]
+      "matches": [
+        "*://*.atlassian.net/*"
+      ],
+      "js": [
+        "./content/script.js"
+      ]
     }
-   ],
-   "action":{
-     "default_popup": "./content/index.html"
-   }
+  ],
+  "action": {
+    "default_popup": "./content/index.html"
+  }
 }
